@@ -1,0 +1,130 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "CRQT",
+  "patterns": [
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#paired-tags"
+    },
+    {
+      "include": "#self-closing-tags"
+    }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.block.crqt",
+          "begin": "<!--",
+          "end": "-->"
+        }
+      ]
+    },
+    "paired-tags": {
+      "patterns": [
+        {
+          "name": "meta.tag.paired.crqt",
+          "begin": "(<)(as|jx|opt|qt|tex|ilt|str|udl)(\\s*)(>)",
+          "end": "(</)(\\2)(\\s*)(>)",
+          "beginCaptures": {
+            "1": {
+              "name": "punctuation.definition.tag.begin.crqt"
+            },
+            "2": {
+              "name": "entity.name.tag.paired.crqt"
+            },
+            "3": {
+              "name": "punctuation.definition.tag.end.crqt"
+            },
+            "4": {
+              "name": "punctuation.definition.tag.end.crqt"
+            }
+          },
+          "endCaptures": {
+            "1": {
+              "name": "punctuation.definition.tag.begin.crqt"
+            },
+            "2": {
+              "name": "entity.name.tag.paired.crqt"
+            },
+            "3": {
+              "name": "punctuation.definition.tag.end.crqt"
+            },
+            "4": {
+              "name": "punctuation.definition.tag.end.crqt"
+            }
+          },
+          "patterns": [
+            {
+              "include": "$self"
+            }
+          ]
+        }
+      ]
+    },
+    "self-closing-tags": {
+      "patterns": [
+        {
+          "name": "meta.tag.self-closing.status.crqt",
+          "match": "(<)(fs|ft)(\\s*)(>)",
+          "captures": {
+            "1": {
+              "name": "punctuation.definition.tag.begin.crqt"
+            },
+            "2": {
+              "name": "entity.name.tag.status.crqt"
+            },
+            "3": {
+              "name": "punctuation.definition.tag.end.crqt"
+            },
+            "4": {
+              "name": "punctuation.definition.tag.end.crqt"
+            }
+          }
+        },
+        {
+          "name": "meta.tag.self-closing.component.crqt",
+          "match": "(<)(cd[0-9*]*|hx|p|pt)(\\s*/?)(>)",
+          "captures": {
+            "1": {
+              "name": "punctuation.definition.tag.begin.crqt"
+            },
+            "2": {
+              "name": "entity.name.tag.component.crqt"
+            },
+            "3": {
+              "name": "punctuation.definition.tag.end.crqt"
+            },
+            "4": {
+              "name": "punctuation.definition.tag.end.crqt"
+            }
+          }
+        },
+        {
+          "name": "meta.tag.self-closing.character.crqt",
+          "match": "(<)(uni)(\\s+[^>]*?)(\\s*/?)(>)",
+          "captures": {
+            "1": {
+              "name": "punctuation.definition.tag.begin.crqt"
+            },
+            "2": {
+              "name": "entity.name.tag.character.crqt"
+            },
+            "3": {
+              "name": "constant.character.escape.crqt"
+            },
+            "4": {
+              "name": "punctuation.definition.tag.end.crqt"
+            },
+            "5": {
+              "name": "punctuation.definition.tag.end.crqt"
+            }
+          }
+        }
+      ]
+    }
+  },
+  "scopeName": "text.xml.crqt"
+}

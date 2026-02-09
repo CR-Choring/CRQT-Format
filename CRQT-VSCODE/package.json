@@ -1,0 +1,47 @@
+{
+  "name": "crqt-support",
+  "displayName": "CRQT Support",
+  "description": "Syntax highlighting for CRQT format - An XML-like markup language",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "keywords": [
+    "crqt",
+    "syntax",
+    "highlighting",
+    "markup"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "crqt",
+        "aliases": [
+          "CRQT",
+          "crqt"
+        ],
+        "extensions": [
+          ".crqt"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "crqt",
+        "scopeName": "text.xml.crqt",
+        "path": "./syntaxes/crqt.tmLanguage.json"
+      }
+    ],
+    "themes": [
+      {
+        "label": "CRQT Default Light",
+        "uiTheme": "vs",
+        "path": "./themes/crqt-default-light.json"
+      }
+    ]
+  }
+}

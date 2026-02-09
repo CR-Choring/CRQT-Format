@@ -1,0 +1,57 @@
+{
+	"name": "CRQT Default",
+	"type": "light",
+	"colors": {
+		"editor.background": "#FFFFFF",
+		"editor.foreground": "#333333"
+	},
+	"tokenColors": [
+		{
+			"name": "CRQT Structure Tags",
+			"scope": "entity.name.tag.structure.crqt",
+			"settings": {
+				"foreground": "#0066CC",
+				"fontStyle": "bold"
+			}
+		},
+		{
+			"name": "CRQT Style Tags",
+			"scope": "entity.name.tag.style.crqt",
+			"settings": {
+				"foreground": "#6600CC",
+				"fontStyle": "bold"
+			}
+		},
+		{
+			"name": "CRQT Status Tags",
+			"scope": "entity.name.tag.status.crqt",
+			"settings": {
+				"foreground": "#CC6600",
+				"fontStyle": "italic"
+			}
+		},
+		{
+			"name": "CRQT Component Tags",
+			"scope": "entity.name.tag.component.crqt",
+			"settings": {
+				"foreground": "#CC0066",
+				"fontStyle": "bold"
+			}
+		},
+		{
+			"name": "CRQT Character Tags",
+			"scope": "entity.name.tag.character.crqt",
+			"settings": {
+				"foreground": "#CC0000",
+				"fontStyle": "bold"
+			}
+		},
+		{
+			"name": "CRQT Tag Punctuation",
+			"scope": "punctuation.definition.tag.crqt",
+			"settings": {
+				"foreground": "#999999"
+			}
+		}
+	]
+}
